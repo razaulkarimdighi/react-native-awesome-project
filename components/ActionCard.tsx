@@ -14,7 +14,7 @@ export default function ActionCard() {
         </View>
         <Image
           source={{
-            uri: 'https://source.unsplash.com/user/c_v_r/1900×800',
+            uri: 'https://images.pexels.com/photos/25711226/pexels-photo-25711226/free-photo-of-charleston-falls-preserve-in-ohio-usa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
           }}
           style={styles.cardImage}
         />
@@ -29,12 +29,12 @@ export default function ActionCard() {
         <View style={styles.footerContainer}>
           <Text>
            <TouchableOpacity onPress={() => openWebsite('https://www.facebook.com')}>
-            <Text>Read More</Text>
-           </TouchableOpacity>
-           <TouchableOpacity onPress={() => openWebsite('https://www.facebook.com')}>
-            <Text>Follow Me</Text>
+            <Text style={styles.socialLinks}>Read More</Text>
            </TouchableOpacity>
           </Text>
+          <TouchableOpacity onPress={() => openWebsite('https://www.instagram.com')}>
+            <Text style={styles.socialLinks}>Follow Me</Text>
+           </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -42,8 +42,18 @@ export default function ActionCard() {
 }
 
 const styles = StyleSheet.create({
-  headingText: {},
-  card: {},
+  headingText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    paddingHorizontal: 8,
+  },
+  card: {
+    width: 350,
+    height: 360,
+    borderRadius: 6,
+    marginVertical: 12,
+    marginHorizontal: 16,
+  },
   elevatedCard: {},
   headingContainer: {},
   headerText: {},
@@ -52,4 +62,5 @@ const styles = StyleSheet.create({
   },
   bodyContainer: {},
   footerContainer: {},
+  socialLinks:{}
 });
