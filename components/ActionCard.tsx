@@ -27,14 +27,16 @@ export default function ActionCard() {
           </Text>
         </View>
         <View style={styles.footerContainer}>
-          <Text>
+          <View>
            <TouchableOpacity onPress={() => openWebsite('https://www.facebook.com')}>
             <Text style={styles.socialLinks}>Read More</Text>
            </TouchableOpacity>
-          </Text>
+          </View>
+          <View>
           <TouchableOpacity onPress={() => openWebsite('https://www.instagram.com')}>
             <Text style={styles.socialLinks}>Follow Me</Text>
            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
@@ -54,13 +56,43 @@ const styles = StyleSheet.create({
     marginVertical: 12,
     marginHorizontal: 16,
   },
-  elevatedCard: {},
-  headingContainer: {},
-  headerText: {},
-  cardImage: {
-    height: 100,
+  elevatedCard: {
+    backgroundColor: '#ffe19c',
+    elevation: 3,
+    shadowOffset: {
+        width: 1,
+        height: 1,
+    },
+
   },
-  bodyContainer: {},
-  footerContainer: {},
-  socialLinks:{}
+  headingContainer: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  headerText: {
+    fontSize: 16,
+    fontWeight: '600'
+  },
+  cardImage: {
+    height: 190,
+
+  },
+  bodyContainer: {
+    padding: 10
+  },
+  footerContainer: {
+    padding: 10,
+    flexDirection:'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly'
+  },
+  socialLinks:{
+    fontSize: 16,
+    backgroundColor: '#ffffff',
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+    borderRadius: 6,
+  }
 });
